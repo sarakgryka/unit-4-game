@@ -10,7 +10,22 @@ $(document).ready(function () {
     let wins = 0;
     let losses = 0;
     let userGuess = [];
-    
+    // let imagesOb = {
+
+    //     "src": "assets/images/crystal 1.jpg",
+    //     "src": "assets/images/crystal 2.jpg",
+    //     "src": "assets/images/crystal 3.jpg",
+    //     "src": "assets/images/crystal 4.jpg"
+    // }    
+    let imagesOb = [
+    "assets/images/crystal 1.jpg",
+    "assets/images/crystal 2.jpg",
+    "assets/images/crystal1.jpg",
+    "assets/images/crystal 4.jpg"
+];
+
+        
+      
 
 
     ///Show player random number at start of the game between 19-120. Should change at the begininng of each game///
@@ -68,7 +83,7 @@ $(document).ready(function () {
 
         let crystalPic = $("<img>");
         crystalPic.addClass("crystalPics");
-        crystalPic.attr("src","assets/images/crystal 1.jpg");
+        crystalPic.attr("src", imagesOb[i]);
         crystalPic.attr("crystalValue", crystals[i]);
         $(".crystals").append(crystalPic);
 
