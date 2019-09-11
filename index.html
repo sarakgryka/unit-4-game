@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CrystalsCollector Game</title>
-    <link ref = "stylesheet" href ="assets/css/reset.css">
-    <link ref = "stylesheet" href = "assets/css/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <link ref = "stylesheet" href ="assets/css/reset.css"> -->
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src ="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
 
 </head>
+
 <body>
+    <container>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Crystals Game</h1>
+                <p class="lead">
 
-    <div id = "randomNumber">
+                    <li>
+                        The goal of the game is to use the crystals below to reach the goal number selected.
+                    </li>
+                    <li>
+                        Each crystal will be assigned a random value, click on the crystal to see the value. The value
+                        will be added to your total score below.
+                    </li>
+                    <li>
+                        If you reach the goal number exactly, you win!
+                    </li>
+                    If you exceed the goal number you lose.
+                    <li>
+                        The game will restart with a new goal number and the crystals will have new values.
+                    </li>
+                    <li>
+                        Good Luck!
+                    </li>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+
+                Goal Number:
+                <div id="randomNumber"></div>
 
 
-    </div>
+            
 
-    <div class = "crystals">
-        
-
-
-    </div>
-
-    <div class ="counterbox">
+            <div class="crystals">
 
 
-    </div>
 
-    <div class ="wins">
+            </div>
+            Total Score:
+            <div class="counterbox">
 
-    </div>
-    
-    <div class = "losses">
 
-    </div>
 
-    
+            </div>
+            Wins:
+            <div class="wins">
+
+
+            </div>
+            Losses:
+            <div class="losses">
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+
+        </div>
+        </div>
+    </container>
+
 </body>
+
 </html>

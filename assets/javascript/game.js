@@ -70,6 +70,15 @@ $(document).ready(function () {
     //counterBox.attr("currentCount", counter);
     $(".counterbox").append(counter);
 
+    $(".wins").append(wins);
+    $(".losses").append(losses);
+    
+    
+  
+
+
+   /// $(".losses").append(losses);
+
 
 
 
@@ -109,9 +118,6 @@ $(document).ready(function () {
         crystalRandoms();
 
 
-
-
-
     }
 
 
@@ -137,18 +143,20 @@ $(document).ready(function () {
         if (randomNumGuess === counter) {
 
             wins++;
-            alert("You win!");
-            console.log("wins" + wins);
+            $(".wins").text(wins);
             restart();
+           
+            
+     
 
         }
 
         else if (counter > randomNumGuess) {
 
             losses++;
-            alert("you lose!");
-            console.log("loss" + losses);
+            $(".losses").text(losses);
             restart();
+    
         }
 
 
