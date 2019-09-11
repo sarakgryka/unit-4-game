@@ -70,8 +70,8 @@ $(document).ready(function () {
     //counterBox.attr("currentCount", counter);
     $(".counterbox").append(counter);
 
-    $(".wins").append(wins);
-    $(".losses").append(losses);
+    $(".wins").html("Wins:" + wins);
+    $(".losses").html("Losses:" + losses);
     
     
   
@@ -105,9 +105,12 @@ $(document).ready(function () {
     function clear() {
 
         $("#randomNumber").empty();
-        $(".counterbox").empty();
+        $(".counterbox").text(0);
+       
+        
         crystals = [];
         counter = 0;
+       
 
     }
 
@@ -116,7 +119,7 @@ $(document).ready(function () {
         randomNumber();
 
         crystalRandoms();
-
+       
 
     }
 
@@ -143,7 +146,9 @@ $(document).ready(function () {
         if (randomNumGuess === counter) {
 
             wins++;
-            $(".wins").text(wins);
+            $(".winOrLoss").text("You won!!");
+            $(".wins").text("Wins:" + wins);
+            
             restart();
            
             
@@ -154,7 +159,9 @@ $(document).ready(function () {
         else if (counter > randomNumGuess) {
 
             losses++;
-            $(".losses").text(losses);
+            $(".winOrLoss").text("You lost!!");
+            $(".losses").text("Losses:" + losses);
+            
             restart();
     
         }
