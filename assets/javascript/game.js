@@ -10,6 +10,7 @@ $(document).ready(function () {
     let wins = 0;
     let losses = 0;
     let userGuess = [];
+    let crystalPic;
     // let imagesOb = {
 
     //     "src": "assets/images/crystal 1.jpg",
@@ -46,14 +47,20 @@ $(document).ready(function () {
     function crystalRandoms() {
 
 
+        
 
-
-        for (var i = 0; i < 4; i++) {
-
-
-
-            crystals.push(Math.floor(Math.random() * 12) + 1);
-
+            crystals = [];
+    
+            for (var i = 0; i < 4; i++) {
+    
+    
+    
+                crystals.push(Math.floor(Math.random() * 12) + 1);
+                console.log(crystals);
+               
+    
+    
+    
 
         }
     };
@@ -86,11 +93,11 @@ $(document).ready(function () {
     ///Each crystal will have a random number value 1-12//
 
 
-
+function crystalCreate () {
     for (var i = 0; i < crystals.length; i++) {
 
 
-        let crystalPic = $("<img>");
+        crystalPic = $("<img>");
         crystalPic.addClass("crystalPics");
         crystalPic.attr("src", imagesOb[i]);
         crystalPic.attr("crystalValue", crystals[i]);
@@ -101,7 +108,29 @@ $(document).ready(function () {
 
 
 
-    }
+    }};
+ 
+
+crystalCreate();
+
+function crystalNums () {
+
+        for (var j = 0; j < crystals.length; j++) {
+    
+    
+            crystalPic.attr("crystalPics", crystals[j]);
+            $(".crystalsPics").append(crystalPic);
+    
+
+    
+    
+        };
+     
+}
+
+crystalNums();
+
+
     function clear() {
 
         $("#randomNumber").empty();
@@ -117,8 +146,8 @@ $(document).ready(function () {
     function restart() {
         clear();
         randomNumber();
-
         crystalRandoms();
+        crystalNums();
        
 
     }
